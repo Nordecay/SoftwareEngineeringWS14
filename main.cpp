@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
   */
   
   InValue = converter::ToDouble(value);
-    
+//MoneyConverter    
   if (conversion == "toEuro" || conversion == "ToEuro")
   {
 	  //Dollar to Euro
@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
 	  double aLotOfDollars = myConverter->convert(InValue);
 	  std::cout << myConverter->toString() << " has converted " << InValue << " Euro to " << aLotOfDollars << " Dollar!" << std::endl;
   }
-  
+//LengthConverter 
   if (conversion == "toFoot" || conversion =="ToFoot" )
   {
 	  //Meter to Foot
@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
 	  double meter_ = myConverter->convert(InValue);
 	  std::cout << myConverter->toString() << "has converted " << InValue << " Meter to " << meter_ << " Foot! " << std::endl;
   }
-
+// TemperaturConverter
   if (conversion == "toFahrenheit" || conversion == "ToFahrenheit")
   {
 	  //Celcius to Fahrenheit
@@ -81,6 +81,8 @@ int main(int argc, char* argv[])
 	  double celcius_ = myConverter->convert(InValue);
 	  std::cout << myConverter->toString() << "has converted " << InValue << " Celcius to " << celcius_ << " Fahrenheit! " << std::endl;
   }
+//WeightConverter
+
 
 
 
