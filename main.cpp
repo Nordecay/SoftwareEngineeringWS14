@@ -1,92 +1,86 @@
+#include "converter.hpp"
+
 #include "dollartoeuroconverter.hpp"
 #include "eurotodollarconverter.hpp"
 #include "metertofootconverter.hpp"
 #include "foottometerconverter.hpp"
+#include "celciustofahrenheitconverter.hpp"
+#include "fahrenheittocelciusconverter.hpp"
 
 
 int main(int argc, char* argv[])
 {
   std::string conversion = (argc >= 2) ? argv[1] : " ";
   std::string value = (argc >= 3) ? argv[2] : " ";
+  double InValue = 0;
  
-
-  //if ( conversion == )
-	   //     convert Value     
-	  
-	  /*
+  //Var Test
+  //std::cout << " V 1 " << conversion << std::endl;
+  //std::cout << " V 2 " << value << std::endl;
+  
+    
+  /*
    * TODO
    *
    * use desired conversion here
    *
-*/
+  */
   
-  if (conversion == "toEuro")
+  InValue = converter::ToDouble(value);
+    
+  if (conversion == "toEuro" || conversion == "ToEuro")
   {
-
 	  //Dollar to Euro
 	  dollarToEuroConverter* myConverter_ = new dollarToEuroConverter();
-	  //double aLotOfDollars = 10000;
-
-	  std::stringstream income_;
-	  income_ << value;
-	  double aLotOfDollars;
-	  income_ >> aLotOfDollars;
-
-
-	  double aLotOfEuros = myConverter_->convert(aLotOfDollars);
-	  std::cout << myConverter_->toString() << " has converted " << aLotOfDollars << " Dollar to " << aLotOfEuros << " Euros!" << std::endl;
+	 
+	  double aLotOfEuros = myConverter_->convert(InValue);
+	  std::cout << myConverter_->toString() << " has converted " << InValue << " Dollar to " << aLotOfEuros << " Euros!" << std::endl;
   }
 
-   
-  if (conversion == "toDollar")
+  if (conversion == "toDollar" || conversion == "ToDollar")
   {
 	  //Euro To Dollar Converter
 	  EuroTodollarConverter* myConverter = new EuroTodollarConverter();
-	  //double aLotofEuro = 10000;
-
-	  std::stringstream income_;
-	  income_ << value;
-	  double aLotOfEuros;
-	  income_ >> aLotOfEuros;
-
-	  double aLotOfDollars = myConverter->convert(aLotOfEuros);
-	  //double aLotOfDollars = myConverter->convert(aLotofEuro);
-	  std::cout << myConverter->toString() << " has converted " << aLotOfEuros << " Euro to " << aLotOfDollars << " Dollar!" << std::endl;
+	 
+	  double aLotOfDollars = myConverter->convert(InValue);
+	  std::cout << myConverter->toString() << " has converted " << InValue << " Euro to " << aLotOfDollars << " Dollar!" << std::endl;
   }
   
-  if (conversion == "toFoot")
+  if (conversion == "toFoot" || conversion =="ToFoot" )
   {
+	  //Meter to Foot
 	  metertofootconverter* myConverter = new  metertofootconverter();
-	  std::stringstream income_;
-	  income_ << value;
-	  double meter_;
-	  income_ >> meter_;
-
-	  double foot_ = myConverter->convert(meter_);
-	  std::cout << myConverter->toString() << "has converted " << meter_ << " Meter to " << foot_ << " Foot! " << std::endl;
-
-
-
+	  
+	  double foot_ = myConverter->convert(InValue);
+	  std::cout << myConverter->toString() << "has converted " << InValue << " Meter to " << foot_ << " Foot! " << std::endl;
   }
 
-  if (conversion == "toMeter")
+  if (conversion == "toMeter" || conversion == "ToMeter")
   {
+	//Foot to Meter
 	  foottometerconverter* myConverter = new  foottometerconverter();
-	  std::stringstream income_;
-	  income_ << value;
-	  double foot_;
-	  income_ >> foot_;
 
-	  double meter_ = myConverter->convert(foot_);
-	  std::cout << myConverter->toString() << "has converted " << foot_ << " Meter to " << meter_ << " Foot! " << std::endl;
-
-
-
+	  double meter_ = myConverter->convert(InValue);
+	  std::cout << myConverter->toString() << "has converted " << InValue << " Meter to " << meter_ << " Foot! " << std::endl;
   }
 
+  if (conversion == "toFahrenheit" || conversion == "ToFahrenheit")
+  {
+	  //Celcius to Fahrenheit
+	  celciustofahrenheit* myConverter = new  celciustofahrenheit();
 
+	  double fahrenheit_ = myConverter->convert(InValue);
+	  std::cout << myConverter->toString() << "has converted " << InValue << " Celcius to " << fahrenheit_ << " Fahrenheit! " << std::endl;
+  }
 
+  if (conversion == "toCelcius" || conversion == "ToCelcius")
+  {
+	  // Fahrenheit to Celcius 
+	  fahrenheittocelcius* myConverter = new  fahrenheittocelcius();
 
+	  double celcius_ = myConverter->convert(InValue);
+	  std::cout << myConverter->toString() << "has converted " << InValue << " Celcius to " << celcius_ << " Fahrenheit! " << std::endl;
+  }
 
 
 
