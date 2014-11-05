@@ -15,7 +15,7 @@ class converter
     virtual std::string toString() const = 0;
     virtual void print() const = 0;
 
-
+	// String to double 
 	static double ToDouble(std::string InValue);
 
 

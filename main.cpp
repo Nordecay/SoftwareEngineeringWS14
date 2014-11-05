@@ -6,12 +6,14 @@
 #include "foottometerconverter.hpp"
 #include "celciustofahrenheitconverter.hpp"
 #include "fahrenheittocelciusconverter.hpp"
-
+#include "ouncestogrammconverter.hpp"
+#include "grammtoouncesconverter.hpp"
+#include "tinytest.hpp"
 
 int main(int argc, char* argv[])
 {
-  std::string conversion = (argc >= 2) ? argv[1] : " ";
-  std::string value = (argc >= 3) ? argv[2] : " ";
+  std::string conversion = (argc >= 2) ? argv[1] : "";
+  std::string value = (argc >= 3) ? argv[2] : "";
   double InValue = 0;
  
   //Var Test
@@ -25,8 +27,15 @@ int main(int argc, char* argv[])
    * use desired conversion here
    *
   */
+  if (value != "")
+  {
+	  InValue = converter::ToDouble(value);
+  }
+  else
+  {
+	  InValue = 0;
+  }
   
-  InValue = converter::ToDouble(value);
 //MoneyConverter    
   if (conversion == "toEuro" || conversion == "ToEuro")
   {
@@ -83,10 +92,21 @@ int main(int argc, char* argv[])
   }
 //WeightConverter
 
+  if (conversion == "toGramm" || conversion == "ToGramm")
+  {
+	  ouncestogrammconverter* myConverter = new ouncestogrammconverter();
 
+	  double gramm_ = myConverter->convert(InValue);
+	  std::cout << myConverter->toString() << "has converted " << InValue << " Ounces to " << gramm_ << " Gramm! " << std::endl;
+  }
 
+  if (conversion == "toOunces" || conversion == "ToOunces")
+  {
+	  grammtoouncesconverter* myConverter = new grammtoouncesconverter();
 
+	  double ounces_ = myConverter->convert(InValue);
+	  std::cout << myConverter->toString() << "has converted " << InValue << " Gramm to " << ounces_ << " Ounces! " << std::endl;
+  }
   return 0;
 }
 
-//test.exe toEuro 10
