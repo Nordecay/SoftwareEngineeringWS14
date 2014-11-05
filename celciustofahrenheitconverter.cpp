@@ -14,7 +14,7 @@ double celciustofahrenheit::convert(double inputCelcius){
 }
 
 std::string celciustofahrenheit::toString() const{
-	return "Dollar to Euro Converter";
+	return "Celcius to Fahrenheit Converter";
 }
 
 void celciustofahrenheit::print() const{

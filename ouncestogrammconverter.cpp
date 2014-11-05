@@ -14,7 +14,7 @@ double ouncestogrammconverter::convert(double inputOunces){
 }
 
 std::string ouncestogrammconverter::toString() const{
-	return "Dollar to Euro Converter";
+	return "Ounces to Gramm Converter";
 }
 
 void ouncestogrammconverter::print() const{

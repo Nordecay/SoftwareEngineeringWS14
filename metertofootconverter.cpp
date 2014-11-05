@@ -6,11 +6,11 @@ metertofootconverter::metertofootconverter()
 {
 }
 
-/*In: double value of dollars
-*Out: Dollar value of input Euro as of 19.10.14
+/*In: double value of Meter
+*Out: Foot value of input Meter as of 19.10.14
 */
-double metertofootconverter::convert(double inputDollars){
-	return inputDollars *3.2808;
+double metertofootconverter::convert(double inputmeter){
+	return inputmeter *3.2808;
 }
 
 std::string metertofootconverter::toString() const{

@@ -6,15 +6,15 @@ fahrenheittocelcius::fahrenheittocelcius()
 {
 }
 
-/*In: double value of Celcius
-*Out: Fahrenheit value of input Celcius
+/*In: double value of Fahrenheit
+*Out:Celcius value of input  Fahrenheit
 */
-double fahrenheittocelcius::convert(double inputCelcius){
-	return (inputCelcius - 32) * 0.5555555555555556;
+double fahrenheittocelcius::convert(double inputFahrenheit){
+	return (inputFahrenheit - 32) * 0.5555555555555556; 
 }
 
 std::string fahrenheittocelcius::toString() const{
-	return "Dollar to Euro Converter";
+	return "Fahrenheit to Celcius Converter";
 }
 
 void fahrenheittocelcius::print() const{

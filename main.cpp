@@ -8,25 +8,15 @@
 #include "fahrenheittocelciusconverter.hpp"
 #include "ouncestogrammconverter.hpp"
 #include "grammtoouncesconverter.hpp"
-#include "tinytest.hpp"
 
+//TinyTest.hpp zu finden unter testmain.cpp - 
+/*
 int main(int argc, char* argv[])
 {
   std::string conversion = (argc >= 2) ? argv[1] : "";
   std::string value = (argc >= 3) ? argv[2] : "";
   double InValue = 0;
  
-  //Var Test
-  //std::cout << " V 1 " << conversion << std::endl;
-  //std::cout << " V 2 " << value << std::endl;
-  
-    
-  /*
-   * TODO
-   *
-   * use desired conversion here
-   *
-  */
   if (value != "")
   {
 	  InValue = converter::ToDouble(value);
@@ -88,10 +78,10 @@ int main(int argc, char* argv[])
 	  fahrenheittocelcius* myConverter = new  fahrenheittocelcius();
 
 	  double celcius_ = myConverter->convert(InValue);
-	  std::cout << myConverter->toString() << "has converted " << InValue << " Celcius to " << celcius_ << " Fahrenheit! " << std::endl;
+	  std::cout << myConverter->toString() << "has converted " << InValue << " Fahrenheit to " << celcius_ << " Fahrenheit! " << std::endl;
   }
 //WeightConverter
-
+  // Ounces to Gramm
   if (conversion == "toGramm" || conversion == "ToGramm")
   {
 	  ouncestogrammconverter* myConverter = new ouncestogrammconverter();
@@ -99,7 +89,7 @@ int main(int argc, char* argv[])
 	  double gramm_ = myConverter->convert(InValue);
 	  std::cout << myConverter->toString() << "has converted " << InValue << " Ounces to " << gramm_ << " Gramm! " << std::endl;
   }
-
+  //Gramm to Ounces
   if (conversion == "toOunces" || conversion == "ToOunces")
   {
 	  grammtoouncesconverter* myConverter = new grammtoouncesconverter();
@@ -107,6 +97,14 @@ int main(int argc, char* argv[])
 	  double ounces_ = myConverter->convert(InValue);
 	  std::cout << myConverter->toString() << "has converted " << InValue << " Gramm to " << ounces_ << " Ounces! " << std::endl;
   }
+
+
+
+
+
+
   return 0;
 }
+
+*/
 
