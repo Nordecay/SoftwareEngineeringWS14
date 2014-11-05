@@ -1,0 +1,4 @@
+//MoneyConverter   "toEuro" "ToEuro" "toDollar" "ToDollar"
+//LengthConverter  "toFoot" "ToFoot" "toMeter" "ToMeter"
+//TemperaturConverter "toFahrenheit" "ToFahrenheit" "toCelcius" "ToCelcius"
+//WeightConverter "toGramm" "ToGramm" "toOunces" "ToOunces"
