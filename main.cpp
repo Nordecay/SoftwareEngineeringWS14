@@ -9,8 +9,25 @@
 #include "ouncestogrammconverter.hpp"
 #include "grammtoouncesconverter.hpp"
 
-//TinyTest.hpp zu finden unter testmain.cpp - 
+#include "singleton.hpp"
+
 /*
+void main()
+{
+	auto test = Singleton<int>::getInst();
+
+	*test = 5;
+
+	auto test2 = Singleton<int>::getInst();
+	auto test3 = Singleton<int>::getInst();
+
+	std::cout << *test3 << std::endl;
+}
+*/
+
+
+//TinyTest.hpp zu finden unter testmain.cpp - 
+/**/
 int main(int argc, char* argv[])
 {
   std::string conversion = (argc >= 2) ? argv[1] : "";
@@ -106,5 +123,5 @@ int main(int argc, char* argv[])
   return 0;
 }
 
-*/
+/**/
 
