@@ -13,7 +13,7 @@ class Singleton
 
 		~Singleton()
 		{
-			delete inst;
+			//delete inst;
 		};
 
 		static C* getInst()

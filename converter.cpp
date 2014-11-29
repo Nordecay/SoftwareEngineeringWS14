@@ -2,6 +2,8 @@
 
 converter::converter()
 {
+
+
 }
 
 double converter::ToDouble(std::string InValue)
