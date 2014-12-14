@@ -13,10 +13,16 @@ public:
 	std::string toString() const;
 	void print() const;
 
+	//Exercise 05
+	fahrenheittocelcius(std::shared_ptr<converter> decorate_celcius) : TempConverter{ decorate_celcius }{}
+	static std::shared_ptr<converter> create();
+
+	/*
 	static converter* create()
 	{
 		return new fahrenheittocelcius();
 	}
+	*/
 };
 
 #endif //FAHRENHEITTOCELCIUS_H

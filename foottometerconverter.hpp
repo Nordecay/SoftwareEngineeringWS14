@@ -8,14 +8,20 @@ class foottometerconverter : public LengthConverter
 {
 public:
 	foottometerconverter();
-	double convert(double inDollars);
+	double convert(double infoot);
 	std::string toString() const;
 	void print() const;
 
+	//Exercise 05
+	foottometerconverter(std::shared_ptr<converter> decorate_meter) : LengthConverter{ decorate_meter }{}
+	static std::shared_ptr<converter> create();
+	
+	/*
 	static converter* create()
 	{
 		return new foottometerconverter();
 	}
+	*/
 };
 
 #endif // FOOTTOMETERCONVERTER_H

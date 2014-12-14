@@ -12,10 +12,16 @@ class dollarToEuroConverter : public MoneyConverter
     std::string toString() const;
     void print() const;
 
+	//Exercise 05
+	dollarToEuroConverter(std::shared_ptr<converter> decorate_euro) : MoneyConverter{ decorate_euro }{}
+	static std::shared_ptr<converter> create();
+
+	/*
 	static converter* create()
 	{
-		return new dollarToEuroConverter();
+	return new foottometerconverter();
 	}
+	*/
 };
 
 #endif // DOLLARTOEUROCONVERTER_H

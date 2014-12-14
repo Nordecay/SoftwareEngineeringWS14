@@ -2,12 +2,16 @@
 #define TEMPCONVERTER_HPP
 
 #include "converter.hpp"
+#include "decorater.hpp"
 
-class TempConverter : public converter
+//class TempConverter : public converter
+class TempConverter : public Decorator_Pattern
 {
 public:
-	virtual double convert(double input) = 0;
+	TempConverter(){}
 
+	virtual double convert(double input) = 0;
+	TempConverter(std::shared_ptr<converter> decorator_weight) : Decorator_Pattern{ decorator_weight }{}
 
 };
 

@@ -13,10 +13,16 @@ public:
 	std::string toString() const;
 	void print() const;
 
+	//Exercise 05
+	EuroTodollarConverter(std::shared_ptr<converter> decorate_dollar) : MoneyConverter{ decorate_dollar }{}
+	static std::shared_ptr<converter> create();
+
+	/*
 	static converter* create()
 	{
-		return new EuroTodollarConverter();
+	return new foottometerconverter();
 	}
+	*/
 };
 
 #endif // DOLLARTOEUROCONVERTER_H

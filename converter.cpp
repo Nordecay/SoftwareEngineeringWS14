@@ -14,3 +14,4 @@ double converter::ToDouble(std::string InValue)
 	income_ >> out_value;
 	return out_value;
 }
+

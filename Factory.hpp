@@ -14,7 +14,8 @@
 #include <iostream>
 #include <string>
 #include <map>
-
+#include <functional>
+#include <memory>
 
 typedef converter* (*pcreate)();
 
@@ -45,8 +46,8 @@ public:
 	converter* create(std::string invalue);
 
 private:
-	std::map<std::string, pcreate> factorymap_;
-	
+	//std::map<std::string, pcreate> factorymap_;
+	std::map<std::string, std::function<std::shared_ptr<converter>()>> factorymap_;
 
 };
 
