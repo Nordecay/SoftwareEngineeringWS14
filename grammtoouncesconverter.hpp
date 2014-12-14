@@ -17,12 +17,7 @@ public:
 	grammtoouncesconverter(std::shared_ptr<converter> decorate_ounces) : WeightConverter{ decorate_ounces }{}
 	static std::shared_ptr<converter> create();
 
-	/*
-	static converter* create()
-	{
-	return new foottometerconverter();
-	}
-	*/
+	
 
 };
 

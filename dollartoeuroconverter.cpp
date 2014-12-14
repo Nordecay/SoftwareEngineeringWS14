@@ -17,10 +17,10 @@ double dollarToEuroConverter::convert(double inputDollars){
 
 /* Exercise 5 */
 double dollarToEuroConverter::convert(double inputDollars){
-	if (decorater == nullptr)
+	if (toDecorate == nullptr)
 		return inputDollars*0.78224;
 	else
-		return decorater->convert(inputDollars*0.78224);
+		return toDecorate->convert(inputDollars*0.78224);
 
 }
 

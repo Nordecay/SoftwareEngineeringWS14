@@ -1,10 +1,21 @@
 #include "converter.hpp"
 
 converter::converter()
+:toDecorate(nullptr)
 {
 
 
 }
+
+/*
+converter::converter(converter* doDecorate)
+ : toDecorate(toDecorate)
+{}
+*/
+
+converter::converter(std::shared_ptr<converter> toDecorate)
+: toDecorate(toDecorate.get())
+{}
 
 double converter::ToDouble(std::string InValue)
 {

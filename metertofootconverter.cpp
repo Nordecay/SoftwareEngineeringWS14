@@ -16,19 +16,22 @@ double metertofootconverter::convert(double inputmeter){
 }
 */
 
-double metertofootconverter::convert(double inputmeter){
-	if (decorater == nullptr)
+double metertofootconverter::convert(double inputmeter)
+{
+	if (toDecorate == nullptr)
 		return inputmeter *3.2808;
 	else
-		return decorater->convert(inputmeter *3.2808);
+		return toDecorate->convert(inputmeter *3.2808);
 
 }
 
-std::string metertofootconverter::toString() const{
+std::string metertofootconverter::toString() const
+{
 	return "Meter to Foot Converter ";
 }
 
-void metertofootconverter::print() const{
+void metertofootconverter::print() const
+{
 	std::cout << this->toString();
 }
 

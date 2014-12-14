@@ -2,16 +2,15 @@
 #define WEIGHTCONVERTER_HPP
 
 #include "converter.hpp"
-#include "decorater.hpp"
 
-//class WeightConverter : public converter
-class WeightConverter : public Decorator_Pattern
+
+class WeightConverter : public converter
 {
 public:
 	WeightConverter(){}
 
 	virtual double convert(double input) = 0;
-	WeightConverter(std::shared_ptr<converter> decorator_weight) : Decorator_Pattern{ decorator_weight }{}
+	WeightConverter(std::shared_ptr<converter> decorator_weight) : converter{ decorator_weight }{}
 	
 };
 

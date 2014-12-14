@@ -13,50 +13,37 @@
 
 #include "singleton.hpp"
 
-#include "decorater.hpp"
 #include "command_Pattern.hpp"
+#include "inverse.hpp"
 
 #include <deque>
 
 
 
-/**/
 int main(int argc, char* argv[])
 {
-	/*
-	std::string conversion = (argc >= 2) ? argv[1] : "";
-	std::string value = (argc >= 3) ? argv[2] : "";
-	double InValue = 0;
+	// ********** PART 1 *********
 
-
-
-	if (value != "")
-	{
-		InValue = converter::ToDouble(value);
-	}
-	else
-	{
-		InValue = 0;
-	}
+	std::cout << "Inverse Example:" << std::endl;
+	std::cout << "================" << std::endl;
 
 
 	auto factory = Singleton<FactoryPattern>::getInst();
 
-	auto converter = factory->create(conversion);
+	auto conv = factory->create("MeterToFoot");
+	std::cout << conv->toString() << ": " << conv->convert(199) << std::endl;
 
-	if (converter != nullptr)
-	{
-		double converted_value = converter->convert(InValue);
-		std::cout << converter->toString() << " : " << converted_value << std::endl;
-	}
-	*/
-
-	// ********** TASK 1 *********
-	std::shared_ptr<converter> a = std::make_shared<celciustofahrenheit>(std::make_shared<fahrenheittocelcius>());
-	std::cout << a->convert(25.12) << std::endl;
+	auto inverse = Inverse(conv);
+	std::cout << inverse.toString() << ": " << inverse.convert(200) << std::endl << std::endl;
 
 
-	// ********** TASK 2 *********
+
+
+
+	// ********** PART 2 *********
+	std::cout << "Commands:" << std::endl;
+	std::cout << "=========" << std::endl;
+
 	std::deque<Command> commands;
 
 	std::cout << "Enter commands (example: \"MeterToFoot 500\" separated by line break) - Press Ctrl-D to exit" << std::endl;

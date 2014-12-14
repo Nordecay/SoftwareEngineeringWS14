@@ -17,10 +17,10 @@ double foottometerconverter::convert(double inputfoot){
 */
 // Exercise 05
 double foottometerconverter::convert(double inputfoot){
-	if (decorater == nullptr)
+	if (toDecorate == nullptr)
 		return inputfoot / 3.2808;
 	else
-		return decorater->convert(inputfoot / 3.2808);
+		return toDecorate->convert(inputfoot / 3.2808);
 
 }
 

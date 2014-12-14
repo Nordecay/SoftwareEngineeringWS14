@@ -18,10 +18,10 @@ double celciustofahrenheit::convert(double inputCelcius)
 //Exercise 05
 double celciustofahrenheit::convert(double inputCelcius)
 {
-	if (decorater == nullptr)
+	if (toDecorate == nullptr)
 		return inputCelcius * 1.8 + 32;
 	else
-		return decorater->convert(inputCelcius * 1.8 + 32);
+		return toDecorate->convert(inputCelcius * 1.8 + 32);
 
 }
 

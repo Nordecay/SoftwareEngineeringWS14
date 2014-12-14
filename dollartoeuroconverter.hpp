@@ -16,12 +16,7 @@ class dollarToEuroConverter : public MoneyConverter
 	dollarToEuroConverter(std::shared_ptr<converter> decorate_euro) : MoneyConverter{ decorate_euro }{}
 	static std::shared_ptr<converter> create();
 
-	/*
-	static converter* create()
-	{
-	return new foottometerconverter();
-	}
-	*/
+	
 };
 
 #endif // DOLLARTOEUROCONVERTER_H

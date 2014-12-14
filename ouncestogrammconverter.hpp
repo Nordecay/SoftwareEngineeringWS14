@@ -16,12 +16,7 @@ public:
 	ouncestogrammconverter(std::shared_ptr<converter> decorate_gramm) : WeightConverter{ decorate_gramm }{}
 	static std::shared_ptr<converter> create();
 
-	/*
-	static converter* create()
-	{
-	return new foottometerconverter();
-	}
-	*/
+	
 };
 
 #endif //OUNCESTOGRAMM_H

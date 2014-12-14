@@ -16,12 +16,7 @@ public:
 	foottometerconverter(std::shared_ptr<converter> decorate_meter) : LengthConverter{ decorate_meter }{}
 	static std::shared_ptr<converter> create();
 	
-	/*
-	static converter* create()
-	{
-		return new foottometerconverter();
-	}
-	*/
+	
 };
 
 #endif // FOOTTOMETERCONVERTER_H

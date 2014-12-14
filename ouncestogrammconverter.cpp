@@ -17,10 +17,10 @@ double ouncestogrammconverter::convert(double inputOunces){
 
 /* Exercise 5 */
 double ouncestogrammconverter::convert(double inputOunces){
-	if (decorater == nullptr)
+	if (toDecorate == nullptr)
 		return inputOunces / 0.035274;
 	else
-		return decorater->convert(inputOunces / 0.035274);
+		return toDecorate->convert(inputOunces / 0.035274);
 
 }
 

@@ -16,10 +16,10 @@ double grammtoouncesconverter::convert(double inputGramm){
 */
 /* Exercise 5 */
 double grammtoouncesconverter::convert(double inputGramm){
-	if (decorater == nullptr)
+	if (toDecorate == nullptr)
 		return inputGramm * 0.035274;
 	else
-		return decorater->convert(inputGramm * 0.035274);
+		return toDecorate->convert(inputGramm * 0.035274);
 
 }
 

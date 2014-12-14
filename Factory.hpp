@@ -17,7 +17,7 @@
 #include <functional>
 #include <memory>
 
-typedef converter* (*pcreate)();
+
 
 class FactoryPattern
 {
@@ -27,26 +27,26 @@ public:
 	{
 		
 		//Weigthconverter
-		factorymap_.insert(std::make_pair("GrammToOunces", &grammtoouncesconverter::create));
-		factorymap_.insert(std::make_pair("OuncesToGramm", &ouncestogrammconverter::create));
+		factorymap_.insert(std::make_pair("GrammToOunces", grammtoouncesconverter::create));
+		factorymap_.insert(std::make_pair("OuncesToGramm", ouncestogrammconverter::create));
 		//Moneyconverter
-		factorymap_.insert(std::make_pair("EuroToDollar", &EuroTodollarConverter::create));
-		factorymap_.insert(std::make_pair("DollarToEuro", &dollarToEuroConverter::create));
+		factorymap_.insert(std::make_pair("EuroToDollar", EuroTodollarConverter::create));
+		factorymap_.insert(std::make_pair("DollarToEuro", dollarToEuroConverter::create));
 		//TempConverter
-		factorymap_.insert(std::make_pair("CelciusToFahrenheit", &celciustofahrenheit::create));
-		factorymap_.insert(std::make_pair("FahrenheitToCelcius", &fahrenheittocelcius::create));
+		factorymap_.insert(std::make_pair("CelciusToFahrenheit", celciustofahrenheit::create));
+		factorymap_.insert(std::make_pair("FahrenheitToCelcius", fahrenheittocelcius::create));
 		//Lengthconverter
-		factorymap_.insert(std::make_pair("MeterToFoot", &metertofootconverter::create));
-		factorymap_.insert(std::make_pair("FootToMeter", &foottometerconverter::create));
+		factorymap_.insert(std::make_pair("MeterToFoot", metertofootconverter::create));
+		factorymap_.insert(std::make_pair("FootToMeter", foottometerconverter::create));
 		
 	}
 
 	~FactoryPattern();
 	
-	converter* create(std::string invalue);
+	std::shared_ptr<converter> create(std::string invalue);
 
 private:
-	//std::map<std::string, pcreate> factorymap_;
+	
 	std::map<std::string, std::function<std::shared_ptr<converter>()>> factorymap_;
 
 };

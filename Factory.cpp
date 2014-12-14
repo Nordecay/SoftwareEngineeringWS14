@@ -1,11 +1,11 @@
 #include "Factory.hpp"
 
-converter* FactoryPattern::create(std::string invalue)
+std::shared_ptr<converter> FactoryPattern::create(std::string invalue)
 {
 	if (factorymap_.find(invalue) != factorymap_.end())
-		return factorymap_[invalue]().get();
+		return factorymap_[invalue]();
 	else
-		return nullptr;
+		return std::shared_ptr<converter>();
 	
 
 }

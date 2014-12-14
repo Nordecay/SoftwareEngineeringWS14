@@ -40,7 +40,7 @@ public:
 		return false;
 	}
 
-	converter* conv;
+	std::shared_ptr<converter> conv;
 	double value;
 
 

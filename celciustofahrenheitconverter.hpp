@@ -16,12 +16,7 @@ public:
 	celciustofahrenheit(std::shared_ptr<converter> decorate_fahrenheit) : TempConverter{ decorate_fahrenheit }{}
 	static std::shared_ptr<converter> create();
 	
-	/*
-	static converter* create()
-	{
-		return new celciustofahrenheit();
-	}
-	*/
+	
 };
 
 #endif //CELCIUSTOFAHRENHEIT_H

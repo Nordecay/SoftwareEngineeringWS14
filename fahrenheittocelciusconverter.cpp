@@ -15,10 +15,10 @@ double fahrenheittocelcius::convert(double inputFahrenheit){
 }
 */
 double fahrenheittocelcius::convert(double inputFahrenheit){
-	if (decorater == nullptr)
+	if (toDecorate == nullptr)
 		return ((inputFahrenheit - 32) * 0.5555555555555556);
 	else
-		return decorater->convert((inputFahrenheit - 32) * 0.5555555555555556);
+		return toDecorate->convert((inputFahrenheit - 32) * 0.5555555555555556);
 
 }
 std::string fahrenheittocelcius::toString() const{
